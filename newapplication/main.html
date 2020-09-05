@@ -1,0 +1,96 @@
+ 
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Sentiment Analysis</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+
+
+  <!-- Google Fonts -->
+
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700" rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+ 
+
+<link rel="stylesheet" href="{{ url_for('static', filename='lib/bootstrap/css/bootstrap.min.css') }}">
+
+  <!-- Libraries CSS Files -->
+
+
+<link rel="stylesheet" href="{{ url_for('static', filename='lib/font-awesome/css/font-awesome.min.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='lib/animate/animate.min.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='lib/ionicons/css/ionicons.min.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='lib/owlcarousel/assets/owl.carousel.min.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='lib/lightbox/css/lightbox.min.css') }}">
+
+  <!-- Main Stylesheet File -->
+  
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+ 
+
+
+<body>
+
+
+  <section id="intro">
+    <div class="intro-container">
+      <div id="introCarousel" class="carousel  slide carousel-fade" data-ride="carousel">
+
+
+          <div class="carousel-item active">
+            <div class="carousel-background"><img src="static/img/back.jpg" alt=""></div>
+            <div class="carousel-container">
+             
+                <div class="auth-wrapper">
+  <div class="auth-content">
+    <div class="card">
+      <form action="{{ url_for('main') }}" method="POST"
+      
+        
+          <div class="card-body">
+           
+            <h4  Style="Color:teal">Sentiment Analysis</h4>
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text"><i class="feather icon-mail"></i></span>
+              </div>
+             
+              <textarea id="text"  name= "text" class="form-control" placeholder="text"></textarea>
+              
+            </div>
+          
+            <div class="form-group text-left mt-2">
+              <button (click)="" [disabled]="loading" class="btn btn-block mb-4" style="background-color:teal;color: white " mat-raised-button>Submit
+              </button>
+            </div>
+          </div>
+        
+    
+      </form>
+    </div>
+  </div>
+
+</div>
+
+              </div>
+        
+          </div>
+
+         
+
+  </div>
+
+  
+  </section><!-- #intro -->
+
+ </body>
+ </html>
