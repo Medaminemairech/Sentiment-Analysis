@@ -56,20 +56,19 @@
           <div class="card-body">
            
           
-           <div >
+           <div class="content">
               <!--<input type="textarea" name="text"  class="form-control" placeholder="text">-->
               <h5 class="result" style="text-align: center;color: teal;"> {{result}} </h5>
               <br\>
-              <h5>the probability that this senetence belongs to the positive class is: </h5>
+              <h5>the probability that this sentence belongs to the positive class is: </h5>
               <br\>
-            <h5 style="text-align: center;"> {{proba}} </h5>
-              <br\>
-              <br\>
-               <div class="form-group text-left mt-2">
-              <button  [disabled]="loading" class="btn btn-block mb-4" style="background-color:teal;color: white; width: 250px; position: absolute; left:33%" mat-raised-button>Try again!
-              </button>
-            </div>
-            <br\>
+            <h5 style="text-align: center; color: teal"> {{proba}}% </h5>
+            
+               <br\>
+               <div class="button">
+              <button  [disabled]="loading" class="btn btn-block mb-4" style="background-color:teal;color: white; width: 250px; position: absolute; left:33%" >Try again!</button>
+           </div>
+           
             </div>
           
           
