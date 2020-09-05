@@ -4,10 +4,10 @@ from tensorflow import keras
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 
 
-model = keras.models.load_model('C:/Users/Amine/Desktop/bidirectionnel lstm.h5')
+model = keras.models.load_model('bidirectionnel lstm.h5')
 # Use pickle to load in the pre-trained tokinizer.
 # loading
-with open('C:/Users/Amine/Desktop/tokenizer.pickle', 'rb') as handle:
+with open('tokenizer.pickle', 'rb') as handle:
     tokenizer = pickle.load(handle)
 app = flask.Flask(__name__, template_folder='newapplication')
 @app.route('/', methods=['GET', 'POST'])
