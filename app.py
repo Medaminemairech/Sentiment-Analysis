@@ -36,6 +36,8 @@ def main():
                                      proba=round(prediction[0][0]*100,2),
                                      
                                      )
+        if flask.request.method == 'POST':
+            return(flask.render_template('main.html'))
 
 if __name__ == '__main__':
     app.run()
