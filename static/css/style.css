@@ -228,7 +228,7 @@ h6 {
         .card-body {
 
             position: relative;
-            padding: 25px 25px 25px 40px;
+            padding: 25px 25px 25px 25px;
             border-style: double;
             border-color: teal;
         }

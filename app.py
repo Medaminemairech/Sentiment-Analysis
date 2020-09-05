@@ -1,5 +1,6 @@
 import flask
 import pickle
+import emoji
 from tensorflow import keras
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 
@@ -25,10 +26,16 @@ def main():
         padded = pad_sequences(seq, maxlen=max_length, padding=padding_type, truncating=trunc_type)
         prediction=model.predict(padded)
         def f(x):
-            if x>0.5:
-                return ' Positive! :D'
-            else:
-                return 'Negative :('
+            if x>0.8:
+                return emoji.emojize('Definitely Positive!:grinning_face_with_big_eyes:')
+            elif 0.6<x<0.8  :
+                return 'Positive'
+            elif 0.5<x<0.6 :
+                return emoji.emojize('Getting some mixed feelings here! :winking_face_with_tongue:')
+            elif 0.1<x<0.5:
+                return  'Negative'
+            else :
+                return 'Negativity overload!'
         return flask.render_template('result.html',
                                      
                                             
